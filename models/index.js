@@ -1,17 +1,20 @@
+// import all models
+const Post = require('./Post');
 const User = require('./User');
-const Post = require("./Post");
 const Vote = require('./Vote');
 const Comment = require('./Comment');
+<<<<<<< HEAD
 
+=======
+>>>>>>> develop
 
 // create associations
 User.hasMany(Post, {
   foreignKey: 'user_id'
 });
 
-// reverse association
 Post.belongsTo(User, {
-  foreignKey: 'user_id',
+  foreignKey: 'user_id'
 });
 
 User.belongsToMany(Post, {
@@ -20,7 +23,6 @@ User.belongsToMany(Post, {
   foreignKey: 'user_id'
 });
 
-// associations
 Post.belongsToMany(User, {
   through: Vote,
   as: 'voted_posts',
@@ -59,4 +61,8 @@ Post.hasMany(Comment, {
   foreignKey: 'post_id'
 });
 
+<<<<<<< HEAD
 module.exports = { User, Post, Vote, Comment };
+=======
+module.exports = { User, Post, Vote, Comment };
+>>>>>>> develop

@@ -41,4 +41,9 @@ Comment.init(
   }
 );
 
+<<<<<<< HEAD
 module.exports = Comment;
+=======
+module.exports = Comment;
+
+>>>>>>> develop
